@@ -1,38 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  background-color: #e6e6e6;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  background-color: #FFFFFF;
+  padding: 7px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.monitor {
+  background-color: #F6F6F6;
+  text-align: right;
+  height: 94px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-data {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-top: 7px;
+}
+
+.result {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.numbers,
+.symbols {
+  width: 80px;
+  height: 100px;
+  border: none;
+  padding: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.numbers {
+  background-color: #E8E8E8;
+  color: #313030;
+}
+.symbols{
+  background-color:#C5C5C5;
+  color: #A70909;
+}
+.red{
+  color: #28800A;
+}
+.numbers:hover{
+  background-color: #d0d0d0;
+} .symbols:hover{
+  background-color: #a2a2a2;
 }
