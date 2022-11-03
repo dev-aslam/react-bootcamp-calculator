@@ -22,6 +22,7 @@ body {
   background-color: #F6F6F6;
   text-align: right;
   height: 94px;
+  padding: 7px;
 }
 
 .input-data {
@@ -45,6 +46,7 @@ body {
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
+  margin-top: 7px;
 }
 
 .numbers,
@@ -68,7 +70,7 @@ body {
   background-color:#C5C5C5;
   color: #A70909;
 }
-.red{
+.green{
   color: #28800A;
 }
 .numbers:hover{
