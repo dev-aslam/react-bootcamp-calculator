@@ -27,6 +27,8 @@ function Calculator() {
     ]
 
     function onInput(value, type) {
+        console.log(output);
+        if(output !==0) setOutput(0);
         if (type === "equals") {
             try {
                 result = eval(input);
