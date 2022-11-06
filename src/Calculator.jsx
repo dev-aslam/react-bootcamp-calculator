@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Calculator.css';
 
 function Calculator() {
 
@@ -6,7 +7,7 @@ function Calculator() {
     const [output, setOutput] = useState(0);
     const [lastInput, setLastInput] = useState(false);
     const [power, setPower] = useState(false);
-    let result=0;
+    let result = 0;
     const inputs = [
         { value: 7, className: "numbers" },
         { value: 8, className: "numbers" },
@@ -27,8 +28,13 @@ function Calculator() {
     ]
 
     function onInput(value, type) {
-        console.log(output);
-        if(output !==0) setOutput(0);
+        if (output !== 0 && type === "symbols") {
+            setInput(output + "" + value);
+            if (lastInput && type === "symbols") return;
+            setLastInput(type === "symbols");
+            setOutput(0);
+            return
+        }
         if (type === "equals") {
             try {
                 result = eval(input);
@@ -60,31 +66,33 @@ function Calculator() {
     }
 
     return (
-        < div className="container" >
-            <section className="monitor">
-                {power &&
-                    <div className="input-data">
-                        {input}
-                    </div>}
-                {power &&
-                    <div className="result">
-                        {output}
-                    </div>}
-            </section>
-            <section className="controls">
-                <button className="control-btn" onClick={() => reset()}>CE</button>
-                <button className="control-btn" onClick={() => powerCheck()}>{power ? "OFF" : "ON"}</button>
-            </section>
-            <section className="input-buttons">
-                {inputs.map(
-                    ({ value, className }) =>
-                        <button onClick={() => onInput(
-                            value,
-                            className
-                        )} className={className} key={value}>{value}</button>
-                )}
-            </section>
-        </div >
+        <div className="App">
+            < div className="container" >
+                <section className="monitor">
+                    {power &&
+                        <div className="input-data">
+                            {input}
+                        </div>}
+                    {power &&
+                        <div className="result">
+                            {output}
+                        </div>}
+                </section>
+                <section className="controls">
+                    <button className="control-btn" onClick={() => reset()}>CE</button>
+                    <button className="control-btn" onClick={() => powerCheck()}>{power ? "OFF" : "ON"}</button>
+                </section>
+                <section className="input-buttons">
+                    {inputs.map(
+                        ({ value, className }) =>
+                            <button onClick={() => onInput(
+                                value,
+                                className
+                            )} className={className} key={value}>{value}</button>
+                    )}
+                </section>
+            </div >
+        </div>
     );
 }
 

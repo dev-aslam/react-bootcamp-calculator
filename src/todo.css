@@ -1,0 +1,32 @@
+.task-input,.tasks-list{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+input{
+    width: 15rem;
+    background: transparent;
+    height: 2rem;
+    border-radius: 5px;
+}
+p{
+    margin: 0;
+}
+button{
+    width: 5rem;
+}
+.closebtn{
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bold;
+    color: red;
+    border: grey;
+    font-size:1rem ;
+    text-align: center;
+}
+.container{
+    width: 75vw;
+    
+}

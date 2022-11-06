@@ -1,0 +1,97 @@
+
+.container {
+    background-color: #FFFFFF;
+    padding: 7px;
+    width: 357px;
+    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.407);
+  }
+  
+  .monitor {
+    background-color: #F6F6F6;
+    text-align: right;
+    height: 94px;
+    padding: 7px;
+    border: 1px solid rgb(178, 178, 178);
+  }
+  
+  .input-data {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+  }
+  
+  .input-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    margin-top: 7px;
+  }
+  
+  .result {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 7px;
+  }
+  
+  .numbers,
+  .symbols,
+  .equals,
+  .control-btn {
+    width: 80px;
+    height: 100px;
+    border: none;
+    padding: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128);
+  }
+  
+  .numbers {
+    background-color: #E8E8E8;
+    color: #313030;
+  }
+  
+  .symbols,
+  .equals {
+    background-color: #C5C5C5;
+    color: #A70909;
+  }
+  
+  .equals {
+    color: #28800A;
+  }
+  
+  .numbers:hover, .control-btn:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .symbols:hover {
+    background-color: #b1b1b1;
+  }
+  
+  .numbers:active, .control-btn:active {
+    background-color: #b9b9b9;
+  }
+  
+  .symbols:active {
+    background-color: #9d9d9d;
+  }
+  
+  .controls{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .control-btn{
+    width: 100px;
+    height: 50px;
+    margin-top: 7px;
+  }
